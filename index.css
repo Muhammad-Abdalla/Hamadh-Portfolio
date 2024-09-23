@@ -291,9 +291,20 @@ header img:hover{
     text-align: center;
 }
 .contact form .input-box input,
-.contact form textarea{
+.contact form{
     width: 100%;
     padding: 1.5rem;
+    font-size: 1.4rem;
+    color: var(--text-color);
+    background: var(--bg-color);
+    border-radius: 2rem;
+    border: 0.8px solid var(--main-color);
+    margin: 1.5rem;
+    resize: none;
+}
+textarea{
+    width: 100%;
+    padding: 2rem;
     font-size: 1.4rem;
     color: var(--text-color);
     background: var(--bg-color);
