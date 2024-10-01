@@ -28,7 +28,7 @@ header{
     width: 100%;
     top: 0;
     left: 0;
-    padding: 3rem 12%;
+    padding: 1.5rem 12%;
     backdrop-filter: blur(10px);
     display: flex;
     justify-content: space-between;
@@ -68,20 +68,20 @@ span{
     color: var(--main-color);
 }
 section{
-   min-height: 90vh; 
-   padding: 1rem 12%;
+   padding: 0rem 12%;
    display: flex;
    align-items: center;
    justify-content: center;
-   gap: 10rem;
+   gap: 5rem;
 }
 .home-content{
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    gap: 30px;
+    gap: 20px;
     text-align: right;
-    margin: 13rem 0;
+    margin-top: 8rem;
+
 }
 .home-content h1{
     font-size: 2rem;
@@ -103,15 +103,16 @@ section{
     line-height: 1.8;
 }
 .home-img img{
-    width: 31VW;
+    width: 29VW;
     border-radius: 100%;
     box-shadow: 0 0 10px var(--main-color);
     transition: 0.6s ease-in-out;
     cursor: pointer;
-    margin-bottom: 200px;
+    margin-bottom: 100px;
+    margin-top: 8rem;
 }
 .home-img img:hover{
-    transform: scale(1.2);
+    transform: scale(1.1);
     box-shadow: 0 0 10px var(--main-color),
                 0 0 12px var(--main-color),
                 0 0 15px var(--main-color);
@@ -180,13 +181,13 @@ header img:hover{
     margin-right: 10px
 }
 .about-image img{
-    width: 31VW;
+    width: 30VW;
     border-radius: 100%;
     box-shadow: 0 0 20px var(--main-color);
     transition: 0.6s ease-in-out;
     cursor: pointer;
-    margin-bottom: 200px;
     transition: 0.4s ease-in-out;
+    margin: 1rem 0;
 }
 .about-image img:hover{
     transform: scale(1.1);
@@ -198,11 +199,11 @@ header img:hover{
     margin: 3rem 0;
 }
 .about{
-    display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10rem;
     background-color: var(--second-bg-color);
+    display: flex;
+    
 }
 .about-content h2{
     font-size: 3rem;
@@ -290,7 +291,8 @@ header img:hover{
     margin: 5rem 0;
     text-align: center;
 }
-.contact form .input-box input{
+.contact form .input-box input,
+.contact form textarea{
     width: 100%;
     padding: 1.5rem;
     font-size: 1.4rem;
@@ -298,19 +300,11 @@ header img:hover{
     background: var(--bg-color);
     border-radius: 2rem;
     border: 0.8px solid var(--main-color);
-    margin: 1.5rem;
-    resize: none;
+    margin: 0.5rem;
+    resize:none;
 }
-.input-group-2 textarea{
-    width: 100%;
-    padding: 2rem;
-    font-size: 1.4rem;
-    color: var(--text-color);
-    background: var(--bg-color);
-    border-radius: 2rem;
-    border: 0.8px solid var(--main-color);
-    margin: 1.5rem;
-    resize: none;
+textarea{
+    height: 20rem;
 }
 .footer{
     background-color: var(--bg-color);
@@ -369,7 +363,6 @@ header img:hover{
     }
     .home{
         flex-direction: column-reverse;
-        margin: 1rem 0;
         gap: 0rem;
     }
     .home-content{
@@ -377,12 +370,17 @@ header img:hover{
         text-align: center;
     }
     .home-img img{
-        width: 52vw;
-        margin: 13rem 0;
+        border-radius: 100%;
+        width: 30vw;
+        height: max-content;
+        margin-top: 7.7rem;
+        margin-bottom: 0rem;
+        gap: 0;
     }
     .about{
         flex-direction: column-reverse;
         text-align: center;
+        margin-top: 0rem;
     }
     .about h2{
         text-align: center;
@@ -402,6 +400,66 @@ header img:hover{
         flex-direction:column; 
     }
 }
+.email-icon{
+    display: none;
+}
+.email-icon.show{
+    display: inline-block;
+    position: absolute;
+    border: 1px solid var(--main-color);
+    color: var(--text-color);
+    border-radius: 2rem;
+    background: var(--bg-color);
+    margin: 17rem 30rem;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    height: 21rem;
+    padding: 3rem;
+    width: 30rem;
+
+}
+.email-icon h3{
+    font-size: 3rem;
+}
+.email-icon label{
+    display: flex;
+    font-size: 1.6rem;
+    padding: 1rem;
+}
+.hire{
+    padding: 3rem;
+    background: var(--bg-color);
+    border: 1px solid var(--main-color);
+    color: white;
+    position: fixed;
+    left: 50%;
+    top: 0%;
+    transform: translate(-50%, -50%) scale(0.1);
+    border-radius: 2rem;
+    visibility: hidden;
+    cursor: pointer;
+}
+.popup{
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 0.4s top 0.4s;
+}
+.hire details{
+    margin: 1rem 0;
+    font-size: 1.4rem;
+}
+.hire details .details{
+    font-size: 1.1rem;
+}
+.hire i{
+    font-size: 2rem;
+}
+/*TRAINING FOR THE MEDIA QUERY RESPONSIVENESS CODE
+@media(max-width:1024x){}
+*/
+
 /*
 .btn-group a{
     padding: 5px;
@@ -410,4 +468,6 @@ header img:hover{
     font-size: 1.3rem;
     background: var(--main-color)
 }
+    TRAINING THE MEDIA QUERIES WITH CSS
+    MEDIA QUERIES HELP CREATE RESPONSIVE PAGES
 */
