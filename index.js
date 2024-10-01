@@ -9,7 +9,7 @@ menuIcon.onclick = () => {
   navbar.classList.toggle("active");
 };
 
-//BELOW IS THE WEB3 SMTP
+//BELOW IS THE WEB3 SMTP CODE FOR SENDING A GMAIL MESSAGE
 
 const form = document.getElementById("form");
 const result = document.getElementById("result");
@@ -49,3 +49,46 @@ form.addEventListener("submit", function (e) {
     });
     console.log(json);
 });
+
+const emailIcon = document.querySelector('.email-icon');
+const emailIconA = document.getElementById('email-icon-a');
+
+emailIconA.addEventListener('click', (e)=>{
+  e.preventDefault();
+
+  emailIconA.classList.toggle("bx-x")
+  emailIcon.classList.toggle('show');
+});
+
+/*
+/ START OF THE JAVASCRIPT hire() function CODE
+const hire = document.querySelector("#hire");
+
+hire.addEventListener("click", (e)=>{
+  e.preventDefault();
+  alert("Praise Allah for all of this neema");
+  const hireBox = document.querySelector(".hire");
+  prompt("Are you an Employer?");
+  hireBox.classList.toggle("popup");
+});
+//END OF THE JAVASCRIPT hire() FUNCTION
+
+//START OF THE CODE FOR CLOSING THE HIRE POP UP DIV
+const closeDetails = document.getElementById("closeDetails");
+
+closeDetails.addEventListener("click", ()=>{
+  const hireMe = document.querySelector(".hire");
+  hireMe.style.display = 'none';
+  window.location.href = "index.html";
+});
+//END OF THE CODE
+*/
+
+let hireBox = document.querySelector(".hire");
+
+function openHireBox(){
+    hireBox.classList.add("popup");
+}
+function closeHireBox(){
+  hireBox.classList.remove("popup");
+}
