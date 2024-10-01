@@ -2,42 +2,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mohammed Portfolio</title>
+    <title>Hamad Portfolio</title>
     <link rel="stylesheet" href="index.css">
     <!--BOX ICONS CSS FONT LINK-->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300&display=swap" rel="stylesheet">
+   <!--<link rel="stylesheet" href="fontawesome-free-6.6.0-web">-->
 </head>
 <body>
     <!--START OF HEADER SECTION -->
+    <!--HEADER CAN BE CLASSIFIED AS A SEMANTIC ELEMENT-->
     <header class="header"> 
-        <img src="Hamadh-logo-3.png">
+            <img src="Hamadh-logo-3.png">
+            <p class="image-info"></p>
         <a href="#home" class="logo">
-       Mohammed<span id="arab-name">محمد </span></a>
+       <abbr title="Muhammad is the name of the last Prophet(S.A.W) of Allah(GOD), he was named as the Best of Creation">Mohammed<span id="arab-name">محمد </abbr></span></a>
         <!--THE i TAG ELEMENT CAN BE USED TO SUPPORT GLOBAL VARIABLES-->
         <!--THE i TAG ELEMENT ALSO SUPPORTS THE EVENT ATTRIBUTES IN HTML-->
         <i class="bx bx-menu" id="menu-icons"></i>
 
         <nav class="navbar">
             <a href="#home">Home</a>
-            <a href="#about">About</a>
+            <a href="about.html">About</a>
             <a href="#services">Services</a>
             <a href="#contact">Contacts</a>
         </nav>
     </header>
     <!--END OF HEADER SECTION-->
 
+    
+                    <!--CREATE A DIVISION OR SECTION FOR THE EMAIL SOCIAL ICON-->
+                    <section class="email-icon">
+                        <h3>Contacts</h3>
+                        <label>Email: <span style="color: var(--main-color)">jualamombasa@gmail.com</span></label><br>
+                        <label>Phone : <span style="color: var(--main-color)">+254757182955</span></label>
+                    </section>
+                    <!--END OF EMAIL ICON FUNCTIONALITIES-->
+
+                    <!--START OF HIRE ME DIALOG BOX-->
+                            <div class="hire">
+                            <i class="bx bx-x" onclick="closeHireBox()"></i>
+                            <h2>Kindly Feel Free To Reach Out !</h2>
+                            <details><p class="details"><br>Phone number : <em>+254757182955</p></em><br><p class="details">Email : <em>jualamombasa@gmail.com</em></details</p></details>
+                            </div>
+                    <!--END OF THE HIRE ME DIALOG BOX-->
+
     <!--START OF HOME SECTION-->
     <section class="home" id="home">
 
         <div class="home-content">
-            <h1>Hello People!, I'm <span>Mohammed</span></h1>
+            <h1>Hello There, I'm <span>Mohammed</span></h1>
             <h3>I'm A Front-End Web Developer</h3>
             <p>Ain't it quite an <span style="color: var(--main-color)">Adventure</span> when you come across a User-friendly,
                 Fully-Functional and Responsive Website or a Web Application that let's you take <span style="color: var(--main-color)">Control</span>?
-                It requires a set of skills needed to make the user interested in what I offer and <thead></thead>the Information I have in the world of <span style="color: var(--main-color)">Technology</span>.
+                It actually requires a set of skills needed to satisfy the User in what I offer and <thead></thead>the Information I have in the world of <span style="color: var(--main-color)">Technology</span>.
             Welcome to my Page.</p>
         
                 <div class="social-icons">
@@ -47,22 +67,25 @@
                     <a href="www.linkedin.com/in/mohammed-mohamed-238960187">
                         <i class="bx bxl-linkedin-square"></i>
                     </a>
-                    <a href="">
+
+                    <a href="" id="email-icon-a">
                         <i class="bx bx-envelope"></i>
                     </a>
+                    
                     <a href="">
                         <i class="bx bxs-phone"></i>
+                        
                     </a>
                 </div>
 
                 <div class="btn-group">
-                    <a href="#" class="btn">Hire</a>
+                    <button class="btn" id="openBtn" onclick="openHireBox()">Hire</button>
                     <a href="#contact" class="btn">Contact</a>
                 </div>
             </div>
 
         <div class="home-img"> 
-            <img src="Hamadh.jpg" alt="sorry for the crash">
+            <img src="BBD2.jpg" alt="sorry for the crash">
         </div>
 
     </section>
@@ -80,7 +103,7 @@
                 <span style="color: var(--main-color)">Back-end</span> support Functionalities and engaging myself with other Solutions that can help solve our
                 day to day problems. Ain't this why we have Technology, Right?
             </p>
-                <a href="" class="btn" id="about-me-btn">About Me</a>
+                <a href="about.html" class="btn" id="about-me-btn">About Me</a>
             </div>
     </section>
     <!--END OF ABOUT ME SECTION-->
@@ -103,17 +126,18 @@
             <div class="service-info">
                 <i class="bx bx-code-alt"></i>
                 <h4>Front-End Development</h4>
-                <p>I use Html, Bootstrap CSS and Plain JavaScript to build Front-End Web Applications. I use firebase which provides Back-End functionalities
-                    which keeps me working on the Front-End. Firebase also provides Authentication services, Firestore for keeping Data and so much more.
-                    Bootstrap helps make them Responsive and have an amazing user interface</p>
+                <p>I use Html, Bootstrap CSS and Vanilla JavaScript to build Front-End Web Applications. I use firebase which provides Back-End functionalities hence
+                    keep me focusing on the Front-End Development. Firebase also provides Authentication services, Firestore for Data Storage and so much more.
+                    Boostrap helps make Pages Responsive and give them an amazing User Interface</p>
             </div>
         </div>
         <div class="service-box">
             <div class="service-info">
                 <i class="bx bxl-windows"></i>
                 <h4>IT Support</h4>
-                <p>I've been working as an IT Support in Mathari National Teaching and referral Hospital.
-                    I help monitor and fix network issues under the institution.
+                <p>I've been working as an IT Support at Mathari National Teaching and referral Hospital.
+                    I monitor and fix network issues to help facilitate day to day patients services under the ICT Department. The Hospital uses a Web Application System
+                    that works under the Internet Protocols of the Main server. I manage all the IP Configurations of the Computer Devices.
                 </p>
             </div>
         </div>
@@ -126,9 +150,16 @@
         </div>
         <div class="service-box">
             <div class="service-info">
-                <h4>Other Service</h4>
+                <h4>Bike Delivery</h4>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                     Praesentium nobis quibusdam unde ad non molestiae illo nesciunt quaerat saepe voluptas voluptatum culpa nulla excepturi aperiam, harum dolor iste repellendus ex?</p>
+            </div>
+        </div>
+        <div class="service-box">
+            <div class="service-info">
+                <h4>Barber</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Error sed assumenda inventore et quis cumque voluptate velit culpa accusantium, dolores, eaque quam tenetur. Veniam id laudantium quaerat quam laboriosam repellendus.</p>
             </div>
         </div>
     </div>
@@ -138,21 +169,21 @@
     <!--START OF CONTACT SECTION-->
     <section class="contact" id="contact">
         <h2>Contact <span style="color: var(--main-color)">Me</span></h2>
-        <form action="https://api.web3forms.com/submit" method="post">
-                      <!--BELOW IS THE INPUT FIELD WITH THE VALUE ACCESS KEY-->
-            <input type="hidden" name="apikey" value="d6ed54e1-ec62-45b7-b362-431c85caabee">
+        <form method="POST" id="form">
+            <!--BELOW IS THE INPUT FIELD WITH THE VALUE ACCESS KEY-->
+            <input type="hidden" name="access_key" value="d6ed54e1-ec62-45b7-b362-431c85caabee">
             <div class="input-group">
                 <div class="input-box">
-                    <input name="full-name" type="text" placeholder="Full Name">
-                    <input name="email" type="email" placeholder="Email">
+                    <input type="text" placeholder="Full Name">
+                    <input type="email" placeholder="Email">
                 </div>
                 <div class="input-box">
-                    <input name="phone-number" type="number" placeholder="Phone Number">
-                    <input name="subject" type="text" placeholder="Subject">
+                    <input type="number" placeholder="Phone Number">
+                    <input type="text" placeholder="Subject">
                 </div>
             </div>
             <div class="input-group-2">
-                <textarea name="Message" id="" cols="30" row="10"
+                <textarea name="message" id="" cols="30" row="10"
                 placeholder="Your Message"></textarea>
                 <input type="submit" value="Send Message" class="btn">
                 <!--THIS IS A RESULT PARAGRAPH-->
