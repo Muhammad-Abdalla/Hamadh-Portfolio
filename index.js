@@ -22,7 +22,6 @@ form.addEventListener('submit', function(e) {
 
     fetch('https://api.web3forms.com/submit', {
             method: 'POST',
-            mode: "no-cors",
             headers: {
                 'Content-Type': 'application/json',
                 'Accept': 'application/json'
