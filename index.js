@@ -10,6 +10,7 @@ menuIcon.onclick = () => {
 };
 
 //BELOW IS THE WEB3 SMTP CODE FOR SENDING A GMAIL MESSAGE
+/*
 const form = document.getElementById('form');
 const result = document.getElementById('result');
 
@@ -48,7 +49,7 @@ form.addEventListener('submit', function(e) {
             }, 3000);
         });
 });
-
+*/
 const emailIcon = document.querySelector('.email-icon');
 const emailIconA = document.getElementById('email-icon-a');
 
