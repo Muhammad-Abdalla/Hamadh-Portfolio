@@ -291,7 +291,6 @@ header img:hover{
     margin: 5rem 0;
     text-align: center;
 }
-.contact form .input-box input,
 .contact form textarea{
     width: 100%;
     padding: 1.5rem;
@@ -302,6 +301,20 @@ header img:hover{
     border: 0.8px solid var(--main-color);
     margin: 0.5rem;
     resize:none;
+}
+.input-group{
+    margin-bottom: 5rem;
+}
+.input-box input{
+    width: 100%;
+    padding:  1rem;
+    font-size: 1.1rem;
+    color: var(--text-color);
+    background: var(--bg-color);
+    border-radius: 1rem;
+    margin: 0.3rem;
+    resize:none;
+    border: 0.1rem solid var(--main-color);
 }
 textarea{
     height: 20rem;
@@ -470,4 +483,16 @@ textarea{
 }
     TRAINING THE MEDIA QUERIES WITH CSS
     MEDIA QUERIES HELP CREATE RESPONSIVE PAGES
+    @media(max-width:1024px){
+        body{
+            height: 10rem;
+            position: absolute;
+            margin: 10rem 0;
+            text-align: center;
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: flex-end;
+            };
+    };
+
 */
